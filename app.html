@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Consumption Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="dashboard-title">Energy Consumption Dashboard</h1>
+        
+        <!-- Top Stats Cards -->
+        <div class="stats-grid">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Average Power Factor</h3>
+                </div>
+                <div class="card-content">
+                    <p id="avgPowerFactor" class="stat-value">0.00</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3>Total Energy Consumption</h3>
+                </div>
+                <div class="card-content">
+                    <p id="totalEnergy" class="stat-value">0.00 kWh</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3>Active Departments</h3>
+                </div>
+                <div class="card-content">
+                    <p id="activeDepts" class="stat-value">0</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Charts Grid -->
+        <div class="charts-grid">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Energy Consumption Trend</h3>
+                </div>
+                <div class="card-content">
+                    <canvas id="energyTrendChart" class="chart-container"></canvas>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>Department-wise Consumption</h3>
+                </div>
+                <div class="card-content">
+                    <canvas id="deptConsumptionChart" class="chart-container"></canvas>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>Power Factor Analysis</h3>
+                </div>
+                <div class="card-content">
+                    <canvas id="powerFactorChart" class="chart-container"></canvas>
+                </div>
+            </div>
+
+
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>Process Energy Efficiency</h3>
+                </div>
+                <div class="card-content">
+                    <canvas id="processEfficiencyChart" class="chart-container"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Date Selector -->
+         <!-- Red Alert Banner -->
+<div id="redAlert" style="display: none;" class="alert-banner">
+    <span id="alertMessage">Critical Alert: Equipment malfunction detected!</span>
+    <button onclick="dismissAlert()">Dismiss</button>
+</div>
+
+
+      
+    </div>
+
+    <script src="script
+.js"></script>
+</body>
+</html>
